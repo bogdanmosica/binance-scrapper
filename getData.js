@@ -17,11 +17,10 @@ const getData = async () => {
 			)
 		);
 		// TELEGRAM
-		console.log(data);
 		if (data[0] === "5") {
-			// sendTelegramMessage(
-			// 	`Binance button game: current timer is ${data[0]}${data[1]}:${data[2]}${data[3]}`
-			// );
+			sendTelegramMessage(
+				`Binance button game: current timer is ${data[0]}${data[1]}:${data[2]}${data[3]}`
+			);
 		}
 
 		await browser.close();
