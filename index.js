@@ -25,6 +25,7 @@ async function main() {
 				(elem) => elem.textContent
 			)
 		);
+		console.log(data);
 		// TELEGRAM
 		if (data[0] === "1") {
 			bot.telegram.sendMessage(
