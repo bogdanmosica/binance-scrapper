@@ -13,7 +13,9 @@ const bot = new Telegraf(TELEGRAM_TOKEN_API);
 
 async function main() {
 	try {
-		const browser = await puppeteer.launch();
+		const browser = await puppeteer.launch({
+			ignoreDefaultArgs: ["--disable-extensions"],
+		});
 		const [page] = await browser.pages();
 
 		await page.goto(binanceURL, { waitUntil: "networkidle0" });
