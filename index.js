@@ -23,9 +23,8 @@ async function main() {
 				(elem) => elem.textContent
 			)
 		);
-		console.log(data);
 		// TELEGRAM
-		if (data[0] === "1") {
+		if (data[0] === "5") {
 			bot.telegram.sendMessage(
 				"-739930581",
 				`Binance button game: current timer is ${data[0]}${data[1]}:${data[2]}${data[3]}`
